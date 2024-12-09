@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #e62a2a;
+    background-color: #f04141;
     color: #333;
   }
  
-  /* Main Container */
+  
   div {
     max-width: 800px;
     margin: 20px auto;
@@ -16,7 +16,7 @@ body {
     box-shadow: 10px rgba(0, 0, 0, 0.1);
   }
  
-  /* Headings */
+ 
   h1 {
     text-align: center;
     color: #444;
@@ -28,7 +28,7 @@ body {
     margin-bottom: 15px;
   }
  
-  /* Inputs and Buttons */
+  
   input,
   textarea,
   select,
@@ -63,7 +63,7 @@ body {
     cursor: not-allowed;
   }
  
-  /* Event Cards */
+  
   .event-card {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -80,7 +80,7 @@ body {
     margin: 5px 0;
   }
  
-  /* Registered Events List */
+  
   ul {
     list-style: none;
     padding: 0;
@@ -95,7 +95,6 @@ body {
     border-bottom: none;
   }
  
-  /* Filter and Search Inputs */
   .filter-container input,
   .filter-container select {
     width: calc(33% - 10px);
@@ -109,23 +108,5 @@ body {
     margin-right: 0;
   }
  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    div {
-      padding: 15px;
-    }
- 
-    input,
-    textarea,
-    select,
-    button {
-      width: 100%;
-      font-size: 14px;
-    }
- 
-    .filter-container input,
-    .filter-container select {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
+  
+  
