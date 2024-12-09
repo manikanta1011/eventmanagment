@@ -177,7 +177,50 @@ const First = () => {
       </div>
  
     
-     
+      <div>
+        <h2>Events</h2>
+        {filteredEvents.length === 0 ? (
+          <p>No events match your criteria.</p>
+        ) : (
+          filteredEvents.map((event) => (
+            <div
+              key={event.id}
+              style={{
+                border: "1px solid #ccc",
+                padding: "10px",
+                marginBottom: "10px",
+              }}
+            >
+              <h3>{event.name}</h3>
+              <p>Date: {event.date}</p>
+              <p>Location: {event.location}</p>
+              <p>{event.description}</p>
+              <p>Category: {event.category}</p>
+              <p>Available Spots: {event.capacity - event.attendees.length}</p>
+              <button
+                onClick={() => handleRegister(event.id)}
+                disabled={event.attendees.length >= event.capacity}
+              >
+                {event.attendees.length >= event.capacity ? "Fully Booked" : "Register"}
+              </button>
+            </div>
+          ))
+        )}
+      </div>
+ 
+      {/* User Dashboard */}
+      <div style={{ marginTop: "20px" }}>
+        <h2>Your Registered Events</h2>
+        {registeredEvents.length === 0 ? (
+          <p>No events registered.</p>
+        ) : (
+          <ul>
+            {registeredEvents.map((event) => (
+              <li key={event.id}>
+                {event.name} - {event.date}
+              </li>
+            ))}
+          </ul>
         )}
       </div>
     </div>
