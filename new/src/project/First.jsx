@@ -88,8 +88,8 @@ const First = () => {
       attendees: [],
     };
     setEvents([...events, newEventData]);
-    setFilters({ category: "", location: "", date: "" }); // Reset filters to include the new event
-    setSearchQuery(""); // Reset search query
+    setFilters({ category: "", location: "", date: "" }); 
+    setSearchQuery(""); 
     setNewEvent({
       name: "",
       date: "",
@@ -114,7 +114,7 @@ const First = () => {
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1>Event Management System</h1>
  
-      {/* Add New Event */}
+      
       <div style={{ marginBottom: "20px" }}>
         <h2>Add New Event</h2>
         <input
@@ -141,7 +141,7 @@ const First = () => {
         />
         <input
           type="text"
-          placeholder="Category (e.g., Workshop, Conference)"
+          placeholder="Enter Category"
           value={newEvent.category}
           onChange={(e) => setNewEvent({ ...newEvent, category: e.target.value })}
         />
@@ -154,7 +154,7 @@ const First = () => {
         <button onClick={handleAddEvent}>Add Event</button>
       </div>
  
-      {/* Filter and Search */}
+      
       <div style={{ marginBottom: "20px" }}>
         <input
           type="text"
@@ -208,7 +208,7 @@ const First = () => {
         )}
       </div>
  
-      {/* User Dashboard */}
+     
       <div style={{ marginTop: "20px" }}>
         <h2>Your Registered Events</h2>
         {registeredEvents.length === 0 ? (
